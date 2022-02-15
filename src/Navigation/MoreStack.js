@@ -15,7 +15,7 @@ const MoreStack = () => {
     const Stack = createNativeStackNavigator()
     return (
         <Stack.Navigator screenOptions={{headerShown:false}}>
-            <Stack.Screen  name = {navigationString.More} component={More}   />
+            <Stack.Screen  name = {navigationString.MoreScreen} component={More}   />
             <Stack.Screen  name = {navigationString.Pricing} component={Pricing}   />
             <Stack.Screen  name = {navigationString.MapLocations} component={MapLocations}   />
             <Stack.Screen  name = {navigationString.WorkingHours} component={WorkingHours}   />

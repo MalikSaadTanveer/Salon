@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import Feather from 'react-native-vector-icons/Feather'
 import {
     Home,
     Service,
@@ -41,14 +42,14 @@ const TabRoutes = () => {
             
             <Tab.Screen options={{
                 tabBarIcon:({focused})=>{
-                    return <AntDesign name = "home"  color={focused?'white':'black'} size={25}/>
+                    return <AntDesign name = "user"  color={focused?'white':'black'} size={25}/>
                 }
             }}
             name = {navigationString.Barbers} component = {Barbers} />
             
             <Tab.Screen options={{
                 tabBarIcon:({focused})=>{
-                    return <AntDesign name = "home"  color={focused?'white':'black'} size={25}/>
+                    return <Feather name = "more-horizontal"  color={focused?'white':'black'} size={25}/>
                 }
             }}
             name = {navigationString.MoreStack} component = {MoreStack} />
