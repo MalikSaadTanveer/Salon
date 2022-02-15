@@ -11,12 +11,14 @@ const ButtonComp = ({btnText,onPress}) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         height:42,
+        width:'90%',
         backgroundColor: '#D9534F',
-        borderRadius:8
+        borderRadius:8,
+        marginBottom:20,
     },
     txt:{
         fontSize:16,

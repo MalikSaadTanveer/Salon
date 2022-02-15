@@ -7,6 +7,10 @@ const More = ({navigation}) => {
     return (
         <View style={styles.container}>
             <ButtonComp btnText={navigationString.Pricing} onPress={()=>navigation.navigate(navigationString.Pricing)} />
+            <ButtonComp btnText={navigationString.MapLocations} onPress={()=>navigation.navigate(navigationString.MapLocations)} />
+            <ButtonComp btnText={navigationString.WorkingHours} onPress={()=>navigation.navigate(navigationString.WorkingHours)} />
+            <ButtonComp btnText={navigationString.ContactUs} onPress={()=>navigation.navigate(navigationString.ContactUs)} />
+            <ButtonComp btnText={navigationString.PrivacyPolicy} onPress={()=>navigation.navigate(navigationString.PrivacyPolicy)} />
         </View>
     );
 };
@@ -16,7 +20,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        backgroundColor: '#000000',
     },
 });
 

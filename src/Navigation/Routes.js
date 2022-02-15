@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MainStack from './MainStack';
+
 const Routes = () => {
 
     const Stack = createNativeStackNavigator();
