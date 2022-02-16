@@ -95,13 +95,13 @@ const PlainHeader = (props) => {
                 }
               />
               <View >
-                <Text style={{color:'#2e1505', fontSize:16,fontStyle:'italic'}}>
-                  Hey, <Text style={{color:'#e4b343'}} >Anney Deffy</Text>
+                <Text style={{color:'white', fontSize:16,fontStyle:'italic'}}>
+                  Hey, <Text style={{color:colors.primary}} >Anney Deffy</Text>
                 </Text>
 
                 <TouchableOpacity onPress={()=>{navigation.navigate('LocationScreen')}} >
                 <View style={{display:'flex',flexDirection:'row'}}  >
-                <Text style={{color:'#2e1505', fontSize:10,marginHorizontal:7,marginTop:5}}>
+                <Text style={{color:colors.white, fontSize:10,marginHorizontal:7,marginTop:5}}>
                   {/* {locationData && locationData.address ? locationData.address : 'loading...'} */}
                   Stockhalm Stad 
                 </Text>
@@ -109,7 +109,7 @@ const PlainHeader = (props) => {
                 <Entypo
                       name="chevron-down"
                       size={ 15}
-                      color='#6e7683'
+                      color={colors.white}
                       style={{marginTop:4}}
                     />
                     </TouchableOpacity>
@@ -141,7 +141,7 @@ const PlainHeader = (props) => {
                   icon='bell'
                   iconType='feather'
                   size={28}
-                  color={colors.darkGrey}
+                  color={colors.white}
                   onPress = {()=> navigation.navigate('Notifications')}
                 />
               </TouchableOpacity>
@@ -226,11 +226,11 @@ const PlainHeader = (props) => {
               </View>
             {/* </View> */}
             <View>
-              <TouchableOpacity  style={{marginHorizontal:12,marginTop:-3}} onPress={() => navigation.navigate('ShoopingBag')}> 
+              <TouchableOpacity  style={{paddingRight:4,marginTop:-3}} onPress={() => {}}> 
                  <MaterialCommunityIcons
                     name='shopping-outline'
                     size={25}
-                    color={colors.darkGrey}
+                    color={colors.white}
                   />
                 
               </TouchableOpacity>
@@ -268,7 +268,7 @@ const plainheaderStyles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: colors.backgroundWhite,
+    backgroundColor: colors.black,
     height: 60,
     paddingLeft: 10,
     paddingRight: 10,

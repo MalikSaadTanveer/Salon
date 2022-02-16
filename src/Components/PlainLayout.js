@@ -64,11 +64,12 @@ const PlainLayout = (props) => {
 const containerstyles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: colors.backgroundWhite,
+    backgroundColor: colors.black,
   },
   container: {
     flexGrow: 1,
-    backgroundColor: colors.backgroundWhite,
+    width:'100%',
+    backgroundColor: colors.black,
   },
   containerGray: {
     flexGrow: 1,
@@ -78,7 +79,7 @@ const containerstyles = StyleSheet.create({
     flex: 1,
   },
   containerInner: {
-    backgroundColor: colors.backgroundWhite,
+    backgroundColor: colors.black,
     flex: 1,
     paddingLeft: 10,
     paddingRight: 10,

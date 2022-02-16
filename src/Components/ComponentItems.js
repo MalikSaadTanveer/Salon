@@ -46,7 +46,7 @@ import Carousel, { Pagination } from 'react-native-snap-carousel';
 // import { useDispatch } from 'react-redux';
 
 const { width: screenWidth } = Dimensions.get('window');
-let {height} = Dimensions.get('window');
+let { height } = Dimensions.get('window');
 // let {width} = Dimensions.get('window');
 
 const IconComponent = (props) => {
@@ -197,8 +197,8 @@ export const Button = (props) => {
             props.outlinedCanceled && buttonStyles.outlinedBtnTextCanceled,
             props.outlined && props.dark && buttonStyles.outlinedBtnTextDark,
             props.danger &&
-              props.outlined &&
-              buttonStyles.outlinedBtnDangerText,
+            props.outlined &&
+            buttonStyles.outlinedBtnDangerText,
             props.large && buttonStyles.buttonTextLarge,
             props.completed && buttonStyles.completedText,
             props.canceled && buttonStyles.canceledText,
@@ -1498,16 +1498,16 @@ export const Avatar = (props) => {
       <View elevation={15}
         style={[
           {
-            width: defaultSize+4,
-            height: defaultSize+4,
-            marginHorizontal:10,
-            borderColor:'#a4783f',
-            borderWidth:2,
-            borderShadow:10,
+            width: defaultSize + 4,
+            height: defaultSize + 4,
+            marginHorizontal: 10,
+            borderColor: '#a4783f',
+            borderWidth: 2,
+            borderShadow: 10,
             shadowColor: 'black',
             shadowRadius: 20,
             shadowOpacity: 0.5,
-            borderRadius: (defaultSize +4)/ 2,
+            borderRadius: (defaultSize + 4) / 2,
           },
           generateStyles,
         ]}
@@ -1516,11 +1516,11 @@ export const Avatar = (props) => {
           style={{
             width: defaultSize,
             height: defaultSize,
-            
+
             borderRadius: defaultSize / 2,
           }}
           source={props.source && props.source}
-          // source={aaa}
+        // source={aaa}
         />
       </View>
     </TouchableWithoutFeedback>
@@ -1530,261 +1530,150 @@ export const Avatar = (props) => {
 export const ProfAreaContainerHome = (props) => {
   const [] = useState([]);
   // const [active, setActive] = useState(0);  
-//handling onPress action  
+  //handling onPress action  
   // const carouselRef = useRef(null);
   // const [loadingImage, setLoadingImage] = useState(false);
+  const data = [
+    {
+      name: 'Mike West',
+      work: 'Hair Style',
+      price: '$10',
+    },
+    {
+      name: 'Mike West',
+      work: 'Hair Style',
+      price: '$10',
+    },
+    {
+      name: 'Mike West',
+      work: 'Hair Style',
+      price: '$10',
+    },
+    {
+      name: 'Mike West',
+      work: 'Hair Style',
+      price: '$10',
+    },
+    {
+      name: 'Mike West',
+      work: 'Hair Style',
+      price: '$10',
+    },
+    {
+      name: 'Mike West',
+      work: 'Hair Style',
+      price: '$10',
+    },
+    {
+      name: 'Mike West',
+      work: 'Hair Style',
+      price: '$10',
+    },
+    {
+      name: 'Mike West',
+      work: 'Hair Style',
+      price: '$10',
+    },
+    {
+      name: 'Mike West',
+      work: 'Hair Style',
+      price: '$10',
+    },
+    {
+      name: 'Mike West',
+      work: 'Hair Style',
+      price: '$10',
+    },
+    {
+      name: 'Mike West',
+      work: 'Hair Style',
+      price: '$10',
+    },
+  ]
   return (
     <>
-      <View style={{flexDirection:'row', justifyContent:'space-between',paddingHorizontal:10}}>
-        <Title  mt12 fontGillsans style={{color:'black',paddingHorizontal:7,}}>
-          Professional in Area 
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 10 }}>
+        <Title mt12 fontGillsans style={{ color: colors.white, paddingHorizontal: 7, }}>
+          Professional in Area
         </Title>
-        <TouchableOpacity 
-          onPress={()=>{props.navigation.navigate('ProfessionalsScreen')}}>
-        <Text style={{ color:'#e8bf61', fontSize:12, fontStyle:'italic',  }}>
+        <TouchableOpacity
+          onPress={() => {  }}>
+          <Text style={{ color: colors.primary, fontSize: 12, fontStyle: 'italic', }}>
             View More
-        </Text>
+          </Text>
         </TouchableOpacity>
-      </View>    
+      </View>
       <ScrollView horizontal
-       style={{paddingHorizontal:7}}
-       >
-        <TouchableOpacity onPress={()=>{props.navigation.navigate('ProfessionalsScreen')}}>
-          <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor:'#fa7c8a', margin: 3 }} />
-          <View >
-              <Text style={{textAlign:'center', fontSize:12, color:'#2e1505'}}>Mike West </Text>
-              <Text style={{textAlign:'center', fontSize:10, color:'#857871'}}>Hair Style </Text>
-              <Text style={{textAlign:'center', fontSize:9, color:'#f7d47d'}}>5.5km  </Text>
-            </View>
-        </TouchableOpacity>
-        <View>
-          <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor:'#fa7c8a', margin: 3 }} />
-          <View >
-              <Text style={{textAlign:'center', fontSize:12, color:'#2e1505'}}>Mike West </Text>
-              <Text style={{textAlign:'center', fontSize:10, color:'#857871'}}>Hair Style </Text>
-              <Text style={{textAlign:'center', fontSize:9, color:'#f7d47d'}}>5.5km  </Text>
-            </View>
-        </View>
-        <View>
-          <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor:'#fa7c8a', margin: 3 }} />
-          <View >
-              <Text style={{textAlign:'center', fontSize:12, color:'#2e1505'}}>Mike West </Text>
-              <Text style={{textAlign:'center', fontSize:10, color:'#857871'}}>Hair Style </Text>
-              <Text style={{textAlign:'center', fontSize:9, color:'#f7d47d'}}>5.5km  </Text>
-            </View>
-        </View>
-        <View>
-          <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor:'#fa7c8a', margin: 3 }} />
-          <View >
-              <Text style={{textAlign:'center', fontSize:12, color:'#2e1505'}}>Mike West </Text>
-              <Text style={{textAlign:'center', fontSize:10, color:'#857871'}}>Hair Style </Text>
-              <Text style={{textAlign:'center', fontSize:9, color:'#f7d47d'}}>5.5km  </Text>
-            </View>
-        </View>
-        <View>
-          <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor:'#fa7c8a', margin: 3 }} />
-          <View >
-              <Text style={{textAlign:'center', fontSize:12, color:'#2e1505'}}>Mike West </Text>
-              <Text style={{textAlign:'center', fontSize:10, color:'#857871'}}>Hair Style </Text>
-              <Text style={{textAlign:'center', fontSize:9, color:'#f7d47d'}}>5.5km  </Text>
-            </View>
-        </View>
-        <View>
-          <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor:'#fa7c8a', margin: 3 }} />
-          <View >
-              <Text style={{textAlign:'center', fontSize:12, color:'#2e1505'}}>Mike West </Text>
-              <Text style={{textAlign:'center', fontSize:10, color:'#857871'}}>Hair Style </Text>
-              <Text style={{textAlign:'center', fontSize:9, color:'#f7d47d'}}>5.5km  </Text>
-            </View>
-        </View>
-        <View>
-          <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor:'#fa7c8a', margin: 3 }} />
-          <View >
-              <Text style={{textAlign:'center', fontSize:12, color:'#2e1505'}}>Mike West </Text>
-              <Text style={{textAlign:'center', fontSize:10, color:'#857871'}}>Hair Style </Text>
-              <Text style={{textAlign:'center', fontSize:9, color:'#f7d47d'}}>5.5km  </Text>
-            </View>
-        </View>
-        <View>
-          <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor:'#fa7c8a', margin: 3 }} />
-          <View >
-              <Text style={{textAlign:'center', fontSize:12, color:'#2e1505'}}>Mike West </Text>
-              <Text style={{textAlign:'center', fontSize:10, color:'#857871'}}>Hair Style </Text>
-              <Text style={{textAlign:'center', fontSize:9, color:'#f7d47d'}}>5.5km  </Text>
-            </View>
-        </View>
-        <View>
-          <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor:'#fa7c8a', margin: 3 }} />
-          <View >
-              <Text style={{textAlign:'center', fontSize:12, color:'#2e1505'}}>Mike West </Text>
-              <Text style={{textAlign:'center', fontSize:10, color:'#857871'}}>Hair Style </Text>
-              <Text style={{textAlign:'center', fontSize:9, color:'#f7d47d'}}>5.5km  </Text>
-            </View>
-        </View>
-        <View>
-          <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor:'#fa7c8a', margin: 3 }} />
-          <View >
-              <Text style={{textAlign:'center', fontSize:12, color:'#2e1505'}}>Mike West </Text>
-              <Text style={{textAlign:'center', fontSize:10, color:'#857871'}}>Hair Style </Text>
-              <Text style={{textAlign:'center', fontSize:9, color:'#f7d47d'}}>5.5km  </Text>
-            </View>
-        </View>
-        <View>
-          <Image source={require('../../assets/avatar1.png')} style={{ width: 75, height: 75, borderRadius: 75/2, borderWidth: 2, borderColor:'#fa7c8a', margin: 3 }} />
-          <View >
-              <Text style={{textAlign:'center', fontSize:12, color:'#2e1505'}}>Mike West </Text>
-              <Text style={{textAlign:'center', fontSize:10, color:'#857871'}}>Hair Style </Text>
-              <Text style={{textAlign:'center', fontSize:9, color:'#f7d47d'}}>5.5km  </Text>
-            </View>
-        </View>
+        style={{ paddingHorizontal: 7 }}
+      >
+
+        {
+          data.map((item, i) => {
+            return (
+              <TouchableOpacity onPress={() => {  }} key={i}>
+                <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor: '#fa7c8a', margin: 3 }} />
+                <View >
+                  <Text style={{ textAlign: 'center', fontSize: 12, color: colors.white }}>{item.name}</Text>
+                  <Text style={{ textAlign: 'center', fontSize: 10, color: colors.white }}>{item.work} </Text>
+                  <Text style={{ textAlign: 'center', fontSize: 10, color: colors.primary }}>{item.price}</Text>
+                </View>
+              </TouchableOpacity>
+            )
+          })
+        }
+        
       </ScrollView>
-      <View style={{flexDirection:'row', justifyContent:'space-between' , paddingHorizontal:10}}>
-        <Title  mt10 fontGillsans style={{color:'black',paddingHorizontal:7,}} >
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 10 }}>
+        <Title mt10 fontGillsans style={{ color: colors.white, paddingHorizontal: 7, }} >
           Popular Home Service
         </Title>
-        <Text onPress={()=>{props.navigation.navigate('ServiceScreen')}} style={{ color:'#e8bf61', fontSize:12, fontStyle:'italic' , marginTop:6 }}>
+        <Text onPress={() => {  }} style={{ color: colors.primary, fontSize: 12, fontStyle: 'italic', marginTop: 6 }}>
           View More
         </Text>
       </View>
       <View>
-      {/* <ScrollView > */}
-        <View style={{flex: 1, marginLeft:'2.5%', marginRight:'2.5%'}}>
-          
-        <FlatList  
-                    data={[  
-                        {key: 'Mike West', src:'../../assets/waxing.png'}, {key: 'Mike West', src:'../../assets/waxing.png'}, 
-                        {key: 'Mike West', src:'../../assets/waxing.png'}, {key: 'MIke West', src:'../../assets/waxing.png'},  
-                        {key: 'Mike West', src:'../../assets/waxing.png'}, {key: 'Mike West', src:'../../assets/waxing.png'},
-                        {key: 'Mike West', src:'../../assets/waxing.png'}, {key: 'Mike West', src:'../../assets/waxing.png'},
-                        {key: 'Mike West', src:'../../assets/waxing.png'}, {key: 'Mike West', src:'../../assets/waxing.png'},  
-                        {key: 'MIke West', src:'../../assets/waxing.png'}, {key: 'Mike West', src:'../../assets/waxing.png'},
-                        {key: 'Mike West', src:'../../assets/waxing.png'}, {key: 'MIke West', src:'../../assets/waxing.png'},
-                        {key: 'Mike West', src:'../../assets/waxing.png'}, {key: 'Mike West', src:'../../assets/waxing.png'},  
-                        {key: 'Mike West', src:'../../assets/waxing.png'}, {key: 'Mike West', src:'../../assets/waxing.png'},
-                        {key: 'MIke West', src:'../../assets/waxing.png'}, {key: 'Mike West', src:'../../assets/waxing.png'},
-                        {key: 'Mike West', src:'../../assets/waxing.png'}, {key: 'Mike West', src:'../../assets/waxing.png'},
-                        {key: 'Mike West', src:'../../assets/waxing.png'}, {key: 'Mike West', src:'../../assets/waxing.png'}  
-                    ]}  
-                    renderItem={({item}) => 
-                      <View style={{width:'30%', margin:'2%'}}>
-                        <TouchableOpacity onPress={()=> {props.navigation.navigate('ServiceTypeScreen')}}>
-                        <Image source={require('../../assets/waxing1.png')} style={{ width: '100%', height: PixelRatio.roundToNearestPixel((screenWidth * 24) / 100), borderRadius: 10/2, borderWidth: 0.5, borderColor:'#C0C0C0' }} />
-                        <View>
-                          <Text style={{textAlign:'center',marginTop:5, fontSize:12, color:colors.darkGrey}}> {item.key} </Text>
-                        </View>
-                        </TouchableOpacity>
-                      </View>}
-                    numColumns={3}
-                    />  
-          {/* <View style={{width:'30%'}}>
-            <Image source={require('../../assets/waxing.png')} style={{ width: '100%', height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742' }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-             
-            </View>
-          </View> */}
-        </View>
+        {/* <ScrollView > */}
+        <View style={{ flex: 1, marginLeft: '2.5%', marginRight: '2.5%' }}>
 
+          <FlatList 
+            data={[
+              { key: 1, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 2, name: 'Mike West', src: '../../assets/waxing.png' },
+              { key: 3, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 4, name: 'MIke West', src: '../../assets/waxing.png' },
+              { key: 5, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 6, name: 'Mike West', src: '../../assets/waxing.png' },
+              { key: 7, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 8, name: 'Mike West', src: '../../assets/waxing.png' },
+              { key: 9, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 10, name: 'Mike West', src: '../../assets/waxing.png' },
+              { key: 11, name: 'MIke West', src: '../../assets/waxing.png' }, { key: 12, name: 'Mike West', src: '../../assets/waxing.png' },
+              { key: 13, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 14, name: 'MIke West', src: '../../assets/waxing.png' },
+              { key: 15, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 16, name: 'Mike West', src: '../../assets/waxing.png' },
+              { key: 17, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 18, name: 'Mike West', src: '../../assets/waxing.png' },
+              { key: 19, name: 'MIke West', src: '../../assets/waxing.png' }, { key: 20, name: 'Mike West', src: '../../assets/waxing.png' },
+              { key: 21, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 22, name: 'Mike West', src: '../../assets/waxing.png' },
+              { key: 23, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 24, name: 'Mike West', src: '../../assets/waxing.png' }
+            ]}
+            renderItem={({ item }) =>
+              <View style={{ width: '30%', margin: '2%' }}>
+                <TouchableOpacity onPress={() => { }} key={item.key}>
+                  <Image source={require('../../assets/waxing1.png')} style={{ width: '100%', height: PixelRatio.roundToNearestPixel((screenWidth * 24) / 100), borderRadius: 10 / 2, borderWidth: 0.5, borderColor: '#C0C0C0' }} />
+                  <View>
+                    <Text style={{ textAlign: 'center', marginTop: 5, fontSize: 12, color: colors.white }}> {item.name} </Text>
+                  </View>
+                </TouchableOpacity>
+              </View>}
+            numColumns={3}
+          />
 
-
-        {/* <View style={{flexDirection: 'row'}}>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-             
-            </View>
-          </View>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-            
-            </View>
-          </View>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-            
-            </View>
-          </View>
         </View>
-        <View style={{flexDirection: 'row'}}>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-            
-            </View>
-          </View>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-            
-            </View>
-          </View>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-            
-            </View>
-          </View>
-        </View>
-        <View style={{flexDirection: 'row'}}>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-            
-            </View>
-          </View>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-            
-            </View>
-          </View>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-            
-            </View>
-          </View>
-        </View>
-        <View style={{flexDirection: 'row'}}>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-            
-            </View>
-          </View>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-            
-            </View>
-          </View>
-          <View>
-            <Image source={require('../../assets/waxing.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), height: PixelRatio.roundToNearestPixel((screenWidth * 30) / 100), borderRadius: 10/2, borderWidth: 1, borderColor:'#f58742', margin: 3 }} />
-            <View >
-              <Text style={{textAlign:'center', fontWeight:'bold', fontSize:14, color:'#2e1505'}}>Mike West </Text>
-            
-            </View>
-          </View>
-        </View> */}
-      {/* </ScrollView> */}
       </View>
-      </>
+    </>
   )
 }
 
+
+
+const profAeaStyle= StyleSheet.create({
+
+})
+ 
 const avatarStyles = StyleSheet.create({});
 
 export const ImageSlider = (props) => {
@@ -1876,7 +1765,7 @@ const sliderStyles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.backgroundWhite,
     borderRadius: 6,
-    marginBottom:10,
+    marginBottom: 10,
     ...Platform.select({
       ios: {
         shadowColor: colors.btnTextDark,

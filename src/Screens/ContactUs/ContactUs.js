@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-
-const ContactUs = () => {
+import { View, Text, StyleSheet,TextInput } from 'react-native';
+import ContactComp from '../../Components/ContactComp';
+const ContactUs = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Text>ContactUs</Text>
+            <ContactComp navigation={navigation} />
+            
         </View>
     );
 };
@@ -12,9 +13,9 @@ const ContactUs = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#000000',
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        // backgroundColor: '#000000',
     },
 });
 

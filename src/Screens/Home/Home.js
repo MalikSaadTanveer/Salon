@@ -1,6 +1,7 @@
 //import liraries
-import React, { Component, useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, StyleSheet,LogBox   } from 'react-native';
+import BarbersComp from '../../Components/BarbersComp';
 import { ImageSlider, ProfAreaContainerHome } from '../../Components/ComponentItems';
 import PlainLayout from '../../Components/PlainLayout';
 import colors from '../../utils/colors';
@@ -13,17 +14,20 @@ const Home = ({navigation}) => {
       "https://source.unsplash.com/1024x768/?tree",
         'https://pbs.twimg.com/profile_images/486929358120964097/gNLINY67_400x400.png',
     ])
+    useEffect(() => {
+      LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+  }, [])
     return (
     <PlainLayout showLoader={false}>
       
       <ProfAreaContainerHome navigation={navigation} />
-      
+      {/* <BarbersComp/> */}
 
-      <View style={{flexDirection:'row', justifyContent:'space-between'}}>
-      <Text style={{ color:'#e8bf61', fontSize:12, fontStyle:'italic', marginHorizontal:7 }}>
+      <View style={homescreenStyles.slider}>
+      <Text style={homescreenStyles.sliderLeft}>
             Offers
         </Text>
-        <Text style={{ color:'#e8bf61', fontSize:12, fontStyle:'italic', marginHorizontal:7 }}>
+        <Text style={homescreenStyles.sliderRight}>
             View More
         </Text>
       </View> 
@@ -94,6 +98,9 @@ const homescreenStyles = StyleSheet.create({
     paddingRight: 10,
     paddingVertical: 5,
   },
+  slider:{flexDirection:'row', justifyContent:'space-between'},
+  sliderLeft:{ color:'#e8bf61', fontSize:12, fontStyle:'italic', marginHorizontal:7 },
+  sliderRight:{ color:'#e8bf61', fontSize:12, fontStyle:'italic', marginHorizontal:7 }
 });
 
 //make this component available to the app

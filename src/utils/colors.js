@@ -1,7 +1,7 @@
 export default {
   // old colors
   //#FF99A6
-  primary: '#e9c064',
+  primary: '#D9534F',
   primaryMidLight: '#ffbdc6',
   accepted: '#4BB543',
   canceled: '#C70000',
@@ -11,8 +11,7 @@ export default {
   wine: '#722F37',
   maroon: '#800000',
   white: '#ffffff',
-  black:'black',
-  backgroundWhite: '#ffffff',
+  black:'#000000',
   backgroundGrey: '#f5f2f2',
   facebookBlue: '#4267B2',
   shadowIOS: {

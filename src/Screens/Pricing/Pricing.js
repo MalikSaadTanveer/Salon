@@ -1,12 +1,12 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-
+import PricingComp from '../../Components/PricingComp'
 // create a component
-const Pricing = () => {
+const Pricing = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Text>Pricing</Text>
+            <PricingComp navigation={navigation}/>
         </View>
     );
 };
@@ -15,9 +15,9 @@ const Pricing = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#000000',
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        // backgroundColor: '#000000',
     },
 });
 

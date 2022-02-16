@@ -1,12 +1,12 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-
+import BarbersComp from '../../Components/BarbersComp';
 // create a component
 const Barbers = () => {
     return (
         <View style={styles.container}>
-            <Text>Barbers</Text>
+            <BarbersComp/>
         </View>
     );
 };
@@ -15,9 +15,9 @@ const Barbers = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#000000',
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        // backgroundColor: '#000000',
     },
 });
 

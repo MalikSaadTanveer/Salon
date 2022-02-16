@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-
-const MapLocations = () => {
+import SelectLocationScreen from '../../Components/SelectLocationScreen';
+const MapLocations = ({ navigation}) => {
     return (
         <View style={styles.container}>
-            <Text>MapLocations</Text>
+            <SelectLocationScreen navigation={navigation} />
         </View>
     );
 };
