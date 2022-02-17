@@ -1501,7 +1501,7 @@ export const Avatar = (props) => {
             width: defaultSize + 4,
             height: defaultSize + 4,
             marginHorizontal: 10,
-            borderColor: '#a4783f',
+            borderColor:colors.primary,
             borderWidth: 2,
             borderShadow: 10,
             shadowColor: 'black',
@@ -1593,9 +1593,9 @@ export const ProfAreaContainerHome = (props) => {
   return (
     <>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 10 }}>
-        <Title mt12 fontGillsans style={{ color: colors.white, paddingHorizontal: 7, }}>
+        <Text mt12 fontGillsans style={{ color: colors.white, paddingHorizontal: 7, }}>
           Professional in Area
-        </Title>
+        </Text>
         <TouchableOpacity
           onPress={() => {  }}>
           <Text style={{ color: colors.primary, fontSize: 12, fontStyle: 'italic', }}>
@@ -1623,8 +1623,8 @@ export const ProfAreaContainerHome = (props) => {
         }
         
       </ScrollView>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 10 }}>
-        <Title mt10 fontGillsans style={{ color: colors.white, paddingHorizontal: 7, }} >
+      <View style={profAreaStyle.sliderHeaderContainer}>
+        <Title  style={profAreaStyle.sliderHeaderLeft} >
           Popular Home Service
         </Title>
         <Text onPress={() => {  }} style={{ color: colors.primary, fontSize: 12, fontStyle: 'italic', marginTop: 6 }}>
@@ -1670,8 +1670,9 @@ export const ProfAreaContainerHome = (props) => {
 
 
 
-const profAeaStyle= StyleSheet.create({
-
+const profAreaStyle= StyleSheet.create({
+  sliderHeaderContainer:{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 10 },
+  sliderHeaderLeft:{ color: colors.white, paddingHorizontal: 7, },
 })
  
 const avatarStyles = StyleSheet.create({});
@@ -1702,7 +1703,6 @@ export const ImageSlider = (props) => {
               <ActivityIndicator color={colors.primary} />
             </View>
           ) : (
-            // <Text>{props.data}</Text>
             <Image
               style={[sliderStyles.image, { zIndex: 0 }]}
               source={

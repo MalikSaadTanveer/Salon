@@ -18,11 +18,13 @@ import {
   Title,
 } from './ComponentItems';
 import colors from '../utils/colors';
+import {ScaledSheet} from 'react-native-size-matters'
 import { SearchBar } from 'react-native-elements';
 // import { useDispatch, useSelector } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 // import { isEmpty, isLoaded } from 'react-redux-firebase';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo';
 
 // import Toast from 'react-native-toast-message';
@@ -35,82 +37,28 @@ const PlainHeader = (props) => {
 
   return (
     <>
-      <View
-        style={[
-          props.titleOnly
-            ? plainheaderStyles.titleOnly
-            : plainheaderStyles.container,
-        ]}
-      >
-        {props.titleOnly ? (
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              
-            }}
-          >
-            {props.showBack ? (
-              <View style={{ flex: 0.9 }}>
-                <IconButton
-                  icon='chevron-left'
-                  iconType='feather'
-                  size={35}
-                  color={colors.grey}
-                  onPress={() => {
-                    navigation.goBack();
-                  }}
-                />
-              </View>
-            ) : (
-              <View style={{ flex: 0.9 }} />
-            )}
-            <View style={{ flex: 8 }}>
-              <Title h3 uppercase m0 center fontGillsans>
-                {props.titleOnly}
-              </Title>
-            </View>
-            <View style={{ flex: 0.9 }}>
-              {props.showRight && props.showRight}
-            </View>
-          </View>
-        ) : (
-          <>
+      <View style={plainheaderStyles.container}>
+        
             <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                paddingTop:10
-              }}
+              style={plainheaderStyles.containerInner}
             >
-              <Avatar 
-                onPress={() => {
-                    // navigation.navigate('AuthenticatedProfile');
-                    navigation.navigate('ProfileScreen');
-                  
-                }}
-                source={require('../../assets/avatar1.png')
-                }
+              <Avatar onPress={() => {}}
+                source={require('../../assets/avatar1.png')}
               />
               <View >
-                <Text style={{color:'white', fontSize:16,fontStyle:'italic'}}>
+                <Text style={plainheaderStyles.containerInnerLeft}>
                   Hey, <Text style={{color:colors.primary}} >Anney Deffy</Text>
                 </Text>
 
-                <TouchableOpacity onPress={()=>{navigation.navigate('LocationScreen')}} >
-                <View style={{display:'flex',flexDirection:'row'}}  >
-                <Text style={{color:colors.white, fontSize:10,marginHorizontal:7,marginTop:5}}>
-                  {/* {locationData && locationData.address ? locationData.address : 'loading...'} */}
+                <TouchableOpacity onPress={()=>{}} >
+                <View style={plainheaderStyles.innerLeftBelowContainer}>
+                <Text style={plainheaderStyles.innerLeftBelow}>
                   Stockhalm Stad 
                 </Text>
                   <TouchableOpacity>
                 <Entypo
                       name="chevron-down"
-                      size={ 15}
-                      color={colors.white}
-                      style={{marginTop:4}}
+                      style={plainheaderStyles.innerLeftDownIcon}
                     />
                     </TouchableOpacity>
 
@@ -119,118 +67,40 @@ const PlainHeader = (props) => {
               </View>
             </View>
             <View>
-              {/* <TouchableOpacity
-              style={{marginHorizontal:7,marginTop:5}}
-                onPress={() => {
-                  bagData && bagData.cart && bagData.cart.length > 0
-                    ? navigation.navigate('CreateAppointmentScreen', {
-                        mainService: bagData.mainService,
-                      })
-                    : Toast.show({
-                        type: 'error',
-                        position: 'bottom',
-                        text1: 'Sorry!',
-                        text2: 'Your bag is empty.',
-                        autoHide: true,
-                        bottomOffset: 20,
-                      });
-                }}
-              > */}
+              
               <TouchableOpacity>
-                 <IconButton
-                  icon='bell'
-                  iconType='feather'
-                  size={28}
-                  color={colors.white}
-                  onPress = {()=> navigation.navigate('Notifications')}
+                 <Feather
+                  name='bell'
+                  style={plainheaderStyles.bellStyle}
+                  onPress = {()=> {}}
                 />
               </TouchableOpacity>
-                {/* <Image
-                  style={{
-                    resizeMode: 'contain',
-                    height: 30,
-                    width: 30,
-                    marginRight: 10,
-                  }}
-                  source={
-                    bagData && bagData.cart && bagData.cart.length > 0
-                      ? require('../../assets/basket.gif')
-                      : require('../../assets/basket_e.png')
-                  }
-                /> */}
-              {/* </TouchableOpacity> */}
+                
             </View>
-          </>
-        )}
+          
       </View>
-      <View
-        style={plainheaderStyles.container}
-      >
-        
-            {/* <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                width: 280,
-                borderRadius: 10,
-                borderWidth: 1,
-              }}
-            > */}
-            {/* <View
-        style={{
-          backgroundColor: colors.grey,
-          padding: 10,
-          marginVertical: 10,
-          borderRadius: 20
-        }}
-      >
-        <TextInput
-          autoCapitalize="none"
-          autoCorrect={false}
-          clearButtonMode="always"
-          value="Search"
-          // onChangeText={queryText => handleSearch(queryText)}
-          placeholder="Search"
-          style={{  paddingHorizontal: 20 }}
-        />
-      </View> */}
-              {/* <SearchBar
-              style={{fontSize:10,backgroundColor:'white',height:20,margin:0,padding:0}}
-                round
-                // lightTheme
-                color={colors.white}
-                // barTintColor="#2222221A"
-                containerStyle={{backgroundColor: 'transparent',  width:270, marginLeft: 10}}
-                // style={{width:220, marginLeft: 200}}
-                placeholder="Search for hair Makeup and more"
-                value=""
-              /> */}
-{/* #f8f8f8 */}
-
-              <View style={{position:'relative',width:'85%'}}>
-              <View style={{position:'absolute',zIndex:1,top:6,left:15}}>
-              <IconButton
-                  icon='search'
-                  iconType='feather'
-                  size={25}
-                  color='#cbced4'
-
+      
+      
+      <View style={plainheaderStyles.container}>
+              <View style={plainheaderStyles.searchContainer}>
+              <View style={plainheaderStyles.searchIconContainer}>
+              <Feather
+                  name='search'
+                  style={plainheaderStyles.searchIcon}
                 />
                 </View>
               <TextInput
-              style={{backgroundColor:'#f8f8f8',color:'black', width:'100%',marginLeft:7,padding:4,borderRadius:6,paddingLeft:35,fontSize:13,}}
+              style={plainheaderStyles.textInputStyle}
               placeholder="Search for hair, makeup and more"
               placeholderTextColor='#cbced4'
               />
               </View>
-            {/* </View> */}
+
             <View>
-              <TouchableOpacity  style={{paddingRight:4,marginTop:-3}} onPress={() => {}}> 
+              <TouchableOpacity  style={{marginTop:-3}} onPress={() => {}}> 
                  <MaterialCommunityIcons
                     name='shopping-outline'
-                    size={25}
-                    color={colors.white}
+                    style={plainheaderStyles.bagIcon}
                   />
                 
               </TouchableOpacity>
@@ -263,16 +133,32 @@ const PlainHeader = (props) => {
   );
 };
 
-const plainheaderStyles = StyleSheet.create({
+const plainheaderStyles = ScaledSheet.create({
   container: {
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: colors.black,
-    height: 60,
-    paddingLeft: 10,
-    paddingRight: 10,
+    height: '60@s',
+    paddingLeft: "10@s",
+    paddingRight: "10@s",
   },
+  containerInner:{
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop:"10@s"
+  },
+  containerInnerLeft:{color:'white', fontSize:"16@s",fontStyle:'italic'},
+  innerLeftBelowContainer:{display:'flex',flexDirection:'row'},
+  innerLeftBelow:{color:colors.white, fontSize:"10@s",marginHorizontal:"7@s",marginTop:"5@s"},
+  innerLeftDownIcon:{marginTop:4,color:colors.white,fontSize:'15@s'},
+  bellStyle:{fontSize:"28@s", color:colors.white},
+  searchContainer:{position:'relative',width:'85%'},
+  searchIconContainer:{position:'absolute',zIndex:1,top:"6@s",left:"15@s"},
+  searchIcon:{color:'#cbced4', fontSize:'20@s'},
+  textInputStyle:{backgroundColor:'#f8f8f8',color:'black', width:'100%',marginLeft:"7@s",padding:"4@s",borderRadius:"6@s",paddingLeft:"35@s",fontSize:"13@s",},
+  bagIcon:{color:colors.white,fontSize:"28@s"},
   titleOnly: {
     flexDirection: 'row',
     alignItems: 'center',
