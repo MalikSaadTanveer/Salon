@@ -34,6 +34,8 @@ import Zocial from 'react-native-vector-icons/Zocial';
 // import * as ImagePicker from 'react-native-image-picker';
 // import Toast from 'react-native-toast-message';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
+import { ScaledSheet } from 'react-native-size-matters';
+import navigationString from '../constants/navigationString'
 // import {
 //   Collapse,
 //   CollapseHeader,
@@ -1501,7 +1503,7 @@ export const Avatar = (props) => {
             width: defaultSize + 4,
             height: defaultSize + 4,
             marginHorizontal: 10,
-            borderColor:colors.primary,
+            borderColor: colors.primary,
             borderWidth: 2,
             borderShadow: 10,
             shadowColor: 'black',
@@ -1527,7 +1529,7 @@ export const Avatar = (props) => {
   );
 };
 
-export const ProfAreaContainerHome = (props) => {
+export const ProfAreaContainerHome = ({ navigation }) => {
   const [] = useState([]);
   // const [active, setActive] = useState(0);  
   //handling onPress action  
@@ -1592,25 +1594,25 @@ export const ProfAreaContainerHome = (props) => {
   ]
   return (
     <>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 10 }}>
-        <Text mt12 fontGillsans style={{ color: colors.white, paddingHorizontal: 7, }}>
-          Professional in Area
+      <View style={profAreaStyle.sliderHeader}>
+        <Text style={profAreaStyle.sliderHeaderLeft}>
+          Salons
         </Text>
         <TouchableOpacity
-          onPress={() => {  }}>
-          <Text style={{ color: colors.primary, fontSize: 12, fontStyle: 'italic', }}>
+          onPress={() => { navigation.navigate(navigationString.Barbers) }}>
+          <Text style={profAreaStyle.sliderHeaderRight}>
             View More
           </Text>
         </TouchableOpacity>
       </View>
       <ScrollView horizontal
-        style={{ paddingHorizontal: 7 }}
+        style={{ paddingHorizontal: 7, flexGrow: 0 }}
       >
 
         {
           data.map((item, i) => {
             return (
-              <TouchableOpacity onPress={() => {  }} key={i}>
+              <TouchableOpacity onPress={() => { }} key={i}>
                 <Image source={require('../../assets/avatar1.png')} style={{ width: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), height: PixelRatio.roundToNearestPixel((screenWidth * 10) / 50), borderRadius: PixelRatio.roundToNearestPixel((screenWidth * 10) / 100), borderWidth: 2, borderColor: '#fa7c8a', margin: 3 }} />
                 <View >
                   <Text style={{ textAlign: 'center', fontSize: 12, color: colors.white }}>{item.name}</Text>
@@ -1621,37 +1623,30 @@ export const ProfAreaContainerHome = (props) => {
             )
           })
         }
-        
+
       </ScrollView>
-      <View style={profAreaStyle.sliderHeaderContainer}>
-        <Title  style={profAreaStyle.sliderHeaderLeft} >
-          Popular Home Service
-        </Title>
-        <Text onPress={() => {  }} style={{ color: colors.primary, fontSize: 12, fontStyle: 'italic', marginTop: 6 }}>
-          View More
+      <View style={profAreaStyle.gridHeaderContainer}>
+        <Text style={profAreaStyle.gridHeaderLeft} >
+          Categories
         </Text>
+        <TouchableOpacity
+          onPress={() => { navigation.navigate(navigationString.Service) }}>
+          <Text style={profAreaStyle.gridHeaderRight}>
+            View More
+          </Text>
+        </TouchableOpacity>
       </View>
       <View>
         {/* <ScrollView > */}
-        <View style={{ flex: 1, marginLeft: '2.5%', marginRight: '2.5%' }}>
+        <View style={{ marginLeft: '2.5%', marginRight: '2.5%' }}>
 
-          <FlatList 
+          <FlatList
             data={[
               { key: 1, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 2, name: 'Mike West', src: '../../assets/waxing.png' },
               { key: 3, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 4, name: 'MIke West', src: '../../assets/waxing.png' },
-              { key: 5, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 6, name: 'Mike West', src: '../../assets/waxing.png' },
-              { key: 7, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 8, name: 'Mike West', src: '../../assets/waxing.png' },
-              { key: 9, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 10, name: 'Mike West', src: '../../assets/waxing.png' },
-              { key: 11, name: 'MIke West', src: '../../assets/waxing.png' }, { key: 12, name: 'Mike West', src: '../../assets/waxing.png' },
-              { key: 13, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 14, name: 'MIke West', src: '../../assets/waxing.png' },
-              { key: 15, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 16, name: 'Mike West', src: '../../assets/waxing.png' },
-              { key: 17, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 18, name: 'Mike West', src: '../../assets/waxing.png' },
-              { key: 19, name: 'MIke West', src: '../../assets/waxing.png' }, { key: 20, name: 'Mike West', src: '../../assets/waxing.png' },
-              { key: 21, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 22, name: 'Mike West', src: '../../assets/waxing.png' },
-              { key: 23, name: 'Mike West', src: '../../assets/waxing.png' }, { key: 24, name: 'Mike West', src: '../../assets/waxing.png' }
-            ]}
+              { key: 5, name: 'Mike West', src: '../../assets/waxing.png' },]}
             renderItem={({ item }) =>
-              <View style={{ width: '30%', margin: '2%' }}>
+              <View style={{ width: '30%', margin: '1.7%' }}>
                 <TouchableOpacity onPress={() => { }} key={item.key}>
                   <Image source={require('../../assets/waxing1.png')} style={{ width: '100%', height: PixelRatio.roundToNearestPixel((screenWidth * 24) / 100), borderRadius: 10 / 2, borderWidth: 0.5, borderColor: '#C0C0C0' }} />
                   <View>
@@ -1661,7 +1656,14 @@ export const ProfAreaContainerHome = (props) => {
               </View>}
             numColumns={3}
           />
-
+          <TouchableOpacity
+            onPress={() => { navigation.navigate(navigationString.Service) }}
+            style={profAreaStyle.bottomViewContainer}>
+            <Text style={profAreaStyle.bottomViewButton}>
+              View All
+            </Text>
+            <Ionicons name='arrow-forward' style={profAreaStyle.bottomViewIcon}/>
+          </TouchableOpacity>
         </View>
       </View>
     </>
@@ -1670,11 +1672,18 @@ export const ProfAreaContainerHome = (props) => {
 
 
 
-const profAreaStyle= StyleSheet.create({
-  sliderHeaderContainer:{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 10 },
-  sliderHeaderLeft:{ color: colors.white, paddingHorizontal: 7, },
+const profAreaStyle = ScaledSheet.create({
+  sliderHeader: { flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: "6@s" },
+  sliderHeaderLeft: { color: colors.white, paddingHorizontal: "7@s", fontSize: "16@s", },
+  sliderHeaderRight: { color: colors.primary, fontSize: "12@s", fontStyle: 'italic', },
+  gridHeaderContainer: { flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: "6@s", paddingTop: "6@s" },
+  gridHeaderLeft: { color: colors.white, paddingHorizontal: "7@s", fontSize: "16@s", },
+  gridHeaderRight: { color: colors.primary, fontSize: "12@s", fontStyle: 'italic', },
+  bottomViewContainer:{flexDirection:'row',alignSelf:'flex-end',alignItems:'center'},
+  bottomViewButton:{color: colors.primary, fontSize: "14@s", fontStyle: 'italic',},
+  bottomViewIcon:{color: colors.primary, fontSize: "18@s",marginLeft:'4@s'}
 })
- 
+
 const avatarStyles = StyleSheet.create({});
 
 export const ImageSlider = (props) => {

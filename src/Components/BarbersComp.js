@@ -21,7 +21,7 @@ const BarbersComp = () => {
                 <Text style={styles.headerLeft} >
                     Barbers
                 </Text>
-                <Text onPress={() => { props.navigation.navigate('ServiceScreen') }} style={styles.headerRight}>
+                <Text onPress={() => {  }} style={styles.headerRight}>
                     View More
                 </Text>
             </View>
