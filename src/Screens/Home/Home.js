@@ -11,6 +11,7 @@ const Home = ({ navigation }) => {
   useEffect(() => {
     LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
   }, [])
+
   return (
     <PlainLayout showLoader={false}> 
       <ProfAreaContainerHome navigation={navigation} />
